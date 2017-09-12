@@ -36,7 +36,7 @@ BuildRequires:  libxml2-tools
 BuildRequires: yast2-installation-control
 
 # original SLES control file
-BuildRequires: skelcd-control-SLES
+BuildRequires: skelcd-control-SLES >= 15.0.0
 
 Provides:       system-installation() = SLES_SAP
 
