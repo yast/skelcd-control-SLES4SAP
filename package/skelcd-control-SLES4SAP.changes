@@ -1,0 +1,6 @@
+-------------------------------------------------------------------
+Tue Sep 12 13:11:55 UTC 2017 - jreidinger@suse.com
+
+- initial package to allow installation of SLES4SAP on leanos
+  (FATE#322276)
+- 15.0.0
