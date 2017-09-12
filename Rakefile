@@ -5,3 +5,5 @@ Yast::Tasks.configuration do |conf|
   conf.skip_license_check << /.*/
 end
 
+# no tarball is needed for package build
+Rake::Task["tarball"].clear_actions
