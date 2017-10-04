@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Oct  4 14:42:32 UTC 2017 - varkoly@suse.com
+
+- Adapt partitioning for SLES4SAP 
+- Remove first_user module
+
+-------------------------------------------------------------------
 Tue Sep 12 13:11:55 UTC 2017 - jreidinger@suse.com
 
 - initial package to allow installation of SLES4SAP on leanos
