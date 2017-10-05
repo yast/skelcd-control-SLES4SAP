@@ -16,22 +16,137 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="n:try_separate_home">
-	<try_separate_home config:type="boolean">false</try_separate_home>
+  <xsl:template match="n:partitioning">
+<partitioning>
+  <proposal>
+    <lvm config:type="boolean">true</lvm>
+    <encrypt config:type="boolean">false</encrypt>
+    <windows_delete_mode>all</windows_delete_mode>
+    <linux_delete_mode>ondemand</linux_delete_mode>
+    <other_delete_mode>ondemand</other_delete_mode>
+    <lvm_vg_strategy>use_needed</lvm_vg_strategy>
+  </proposal>
+
+  <volumes config:type="list">
+    <!-- The root filesystem -->
+    <volume>
+      <mount_point>/</mount_point>
+      <!-- Enforce Btrfs for root by not offering any other option -->
+      <fstypes>btrfs</fstypes>
+      <desired_size>60GiB</desired_size>
+      <min_size>40GiB</min_size>
+      <max_size>80GiB</max_size>
+      <weight>50</weight>
+      <!-- Always use snapshots, no matter what -->
+      <snapshots config:type="boolean">true</snapshots>
+      <snapshots_configurable config:type="boolean">false</snapshots_configurable>
+
+      <btrfs_default_subvolume>@</btrfs_default_subvolume>
+      <subvolumes config:type="list">
+            <subvolume>
+                <path>home</path>
+            </subvolume>
+            <subvolume>
+                <path>opt</path>
+            </subvolume>
+            <subvolume>
+                <path>srv</path>
+            </subvolume>
+            <subvolume>
+                <path>tmp</path>
+            </subvolume>
+            <subvolume>
+                <path>usr/local</path>
+            </subvolume>
+            <subvolume>
+                <path>var/cache</path>
+            </subvolume>
+            <subvolume>
+                <path>var/crash</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/libvirt/images</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/machines</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mailman</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mariadb</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mysql</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/named</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/pgsql</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/log</path>
+            </subvolume>
+            <subvolume>
+                <path>var/opt</path>
+            </subvolume>
+            <subvolume>
+                <path>var/spool</path>
+            </subvolume>
+            <subvolume>
+                <path>var/tmp</path>
+            </subvolume>
+            <!-- architecture specific subvolumes -->
+
+            <subvolume>
+                <path>boot/grub2/i386-pc</path>
+                <archs>i386,x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/x86_64-efi</path>
+                <archs>x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/powerpc-ieee1275</path>
+                <archs>ppc,!board_powernv</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/x86_64-efi</path>
+                <archs>x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/s390x-emu</path>
+                <archs>s390</archs>
+            </subvolume>
+      </subvolumes>
+    </volume>
+
+    <!-- The swap volume -->
+    <volume>
+      <mount_point>swap</mount_point>
+      <fstype>swap</fstype>
+      <desired_size>6GiB</desired_size>
+      <min_size>4GiB</min_size>
+      <max_size>10GiB</max_size>
+      <weight>50</weight>
+    </volume>
+
+    <!--
+      No home filesystem, so the option of a separate home is not even
+      offered to the user.
+      On the other hand, a separate data volume (optional or mandatory) could
+      be defined.
+    -->
+
+  </volumes>
+</partitioning>
   </xsl:template>
 
-  <xsl:template match="n:root_base_size">
-	<root_base_size>60GB</root_base_size>
-  </xsl:template>
-
-  <xsl:template match="n:root_max_size">
-	<root_max_size>80GB</root_max_size>
-  </xsl:template>
-
-  <xsl:template match="n:proposal_lvm">
-	<proposal_lvm config:type="boolean">true</proposal_lvm>
-	<lvm_vg_strategy>use_needed</lvm_vg_strategy>
-  </xsl:template>
 
   <xsl:template match="n:module[n:name='user_first']">
          <module>
