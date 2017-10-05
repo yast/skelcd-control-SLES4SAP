@@ -157,4 +157,23 @@
          </module>
   </xsl:template>
 
+  <xsl:template match="n:workflow[n:stage='continue' and n:mode='autoinstallation']">
+	  <xsl:copy>
+	    <xsl:apply-templates/>
+	  </xsl:copy>
+        <workflow>
+            <defaults>
+                <archs>all</archs>
+            </defaults>
+            <label>Preparation</label>
+            <mode>installation</mode>
+            <stage>continue</stage>
+            <modules config:type="list">
+                <module>
+                    <label>SAP Setup</label>
+                    <name>sap</name>
+                </module>
+            </modules>
+        </workflow>
+  </xsl:template>
 </xsl:stylesheet>
