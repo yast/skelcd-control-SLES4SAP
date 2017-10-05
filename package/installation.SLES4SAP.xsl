@@ -30,9 +30,16 @@
 
   <xsl:template match="n:proposal_lvm">
 	<proposal_lvm config:type="boolean">true</proposal_lvm>
+	<lvm_vg_strategy>use_needed</lvm_vg_strategy>
   </xsl:template>
 
-  <xsl:template match="n:module[n:name='user_first']"/>
-  <xsl:template match="text()[following-sibling::node()[1][self::n:module[n:name='user_first']]]" />
+  <xsl:template match="n:module[n:name='user_first']">
+         <module>
+                   <label>Installation Mode</label>
+                   <name>sap-start</name>
+                   <enable_back>yes</enable_back>
+                   <enable_next>yes</enable_next>
+         </module>
+  </xsl:template>
 
 </xsl:stylesheet>
