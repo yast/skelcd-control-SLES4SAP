@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Oct 19 13:02:55 UTC 2017 - varkoly@suse.com
+
+- FATE#323792: [MODULE] Create SAP Applications Module
+- Include sles4sap_role 
+
+-------------------------------------------------------------------
 Thu Oct  5 10:58:20 UTC 2017 - varkoly@suse.com
 
 - Adapt partitioning for SLES4SAP 
