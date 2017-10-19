@@ -64,7 +64,7 @@ SLES4SAP control file needed for installation
 xsltproc %{SOURCE0} /installation.xml > installation.xml
 #xsltproc %{SOURCE0} /installation.xml > installation1.xml
 #xmllint --format installation1.xml > installation.xml
-diff -u /installation.xml > installation.xml || :
+diff -u /installation.xml installation.xml || :
 
 %check
 #
