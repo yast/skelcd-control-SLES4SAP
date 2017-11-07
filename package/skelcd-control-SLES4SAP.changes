@@ -1,4 +1,25 @@
 -------------------------------------------------------------------
+Tue Nov  7 10:39:55 UTC 2017 - varkoly@suse.com
+
+- bsc#1066678 New partitioning proposal does not work. 
+  Fixed the fs tags. From <fstypes> to <fs_type> 
+- Fix swap size
+- Remove weight
+
+-------------------------------------------------------------------
+Thu Nov  2 20:58:42 UTC 2017 - varkoly@suse.com
+
+- FATE#323792: [MODULE] Create SAP Applications Module
+  Applying the new partitioning proposal.
+
+-------------------------------------------------------------------
+Fri Oct 27 09:33:53 UTC 2017 - varkoly@suse.com
+
+- FATE#323792: [MODULE] Create SAP Applications Module
+- Start inst_sap-start client via <additional_dialogs>
+- Adapt pattern names
+
+-------------------------------------------------------------------
 Thu Oct 19 13:02:55 UTC 2017 - varkoly@suse.com
 
 - FATE#323792: [MODULE] Create SAP Applications Module
