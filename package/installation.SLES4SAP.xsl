@@ -161,7 +161,7 @@
         </partitioning>
         <additional_dialogs>inst_sap-start</additional_dialogs>
         <software>
-          <default_patterns>base gnome-basic</default_patterns>
+          <default_patterns>base gnome-basic sap_server</default_patterns>
         </software>
         </system_role>
       <xsl:copy>

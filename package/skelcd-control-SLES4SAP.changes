@@ -5,6 +5,7 @@ Tue Nov  7 10:39:55 UTC 2017 - varkoly@suse.com
   Fixed the fs tags. From <fstypes> to <fs_type> 
 - Fix swap size
 - Remove weight
+- Introduce sap_server pattern again.
 
 -------------------------------------------------------------------
 Thu Nov  2 20:58:42 UTC 2017 - varkoly@suse.com
