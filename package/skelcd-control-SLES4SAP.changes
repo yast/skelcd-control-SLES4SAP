@@ -1,4 +1,21 @@
 -------------------------------------------------------------------
+Wed Nov 22 12:23:39 UTC 2017 - dakechi@suse.com
+
+- bsc#1066771: [Build 327.1] [SLED] gnome-shell-classic was not 
+  installed by default
+- bsc#1069413: [Build 343.1] gnome-basic pattern not found during
+  installation 
+  Adjusted the system role to consider the new name of the 
+  gnome_basic pattern (with underscore).
+
+-------------------------------------------------------------------
+Wed Nov  8 07:36:43 UTC 2017 - dakechi@suse.com
+
+- bsc#1066678: New partitioning proposal does not work.
+  - Included weight back. The new storage-ng considers it mandatory 
+  - Changed the min, max and desired sizes for different values to
+    avoid crash.
+-------------------------------------------------------------------
 Tue Nov  7 10:39:55 UTC 2017 - varkoly@suse.com
 
 - bsc#1066678 New partitioning proposal does not work. 

@@ -38,8 +38,8 @@
              <lvm config:type="boolean">true</lvm>
              <encrypt config:type="boolean">false</encrypt>
              <windows_delete_mode>all</windows_delete_mode>
-             <linux_delete_mode>ondemand</linux_delete_mode>
-             <other_delete_mode>ondemand</other_delete_mode>
+             <linux_delete_mode>all</linux_delete_mode>
+             <other_delete_mode>all</other_delete_mode>
              <lvm_vg_strategy>use_needed</lvm_vg_strategy>
            </proposal>
            
@@ -52,6 +52,7 @@
                <desired_size>60GiB</desired_size>
                <min_size>40GiB</min_size>
                <max_size>80GiB</max_size>
+               <weight>50</weight>
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -146,8 +147,9 @@
                <mount_point>swap</mount_point>
                <fs_type>swap</fs_type>
                <desired_size>2GiB</desired_size>
-               <min_size>2GiB</min_size>
-               <max_size>2GiB</max_size>
+               <min_size>1GiB</min_size>
+               <max_size>4GiB</max_size>
+               <weight>50</weight>
              </volume>
            
              <!--
@@ -161,7 +163,7 @@
         </partitioning>
         <additional_dialogs>inst_sap-start</additional_dialogs>
         <software>
-          <default_patterns>base gnome-basic sap_server</default_patterns>
+          <default_patterns>base gnome_basic sap_server</default_patterns>
         </software>
         </system_role>
       <xsl:copy>
