@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Dec  1 14:11:15 UTC 2017 - varkoly@suse.com
+
+- FATE#323792: [MODULE] Create SAP Applications Module
+  o Adapt the text according to PM 
+  o Remove all existing partitions
+
+-------------------------------------------------------------------
 Wed Nov 22 12:59:20 UTC 2017 - dakechi@suse.com
 
 - bsc#1066771: [Build 327.1] [SLED] gnome-shell-classic was not 

@@ -161,7 +161,7 @@
         </partitioning>
         <additional_dialogs>inst_sap-start</additional_dialogs>
         <software>
-          <default_patterns>base gnome-basic sap-server</default_patterns>
+          <default_patterns>base gnome_basic sap_server</default_patterns>
         </software>
         </system_role>
       <xsl:copy>
@@ -175,8 +175,8 @@
           <label>SLES for SAP Applications</label>
       </sles4sap_role>
       <sles4sap_role_description>
-          <label>• Ideal if you want to run an SAP Application</label>
-          <label>• RDP and SAP Installation Wizard option available</label>
+          <label>• Ideal if you want to run an SAP Application
+• RDP and SAP Installation Wizard option available</label>
       </sles4sap_role_description>
       <xsl:copy>
         <xsl:apply-templates/>
