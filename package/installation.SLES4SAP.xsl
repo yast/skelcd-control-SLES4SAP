@@ -11,6 +11,11 @@
   exclude-result-prefixes="n"
 >
 
+<!--
+Work around for the text domain
+textdomain="control"
+-->
+
 <xsl:output method="xml" indent="yes"/>
 
   <xsl:template match="node()|@*">

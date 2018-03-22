@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Mar 22 14:31:19 UTC 2018 - lslezak@suse.cz
+
+- Enhance the XSL file so the translatable strings can be extracted
+  by the y2makepot tool (bsc#1083720)
+- 15.0.2
+
+-------------------------------------------------------------------
 Wed Jan 10 17:13:42 UTC 2018 - rbrown@suse.com
  
 - adjust subvolume list to have NoCOW /var instead of many
