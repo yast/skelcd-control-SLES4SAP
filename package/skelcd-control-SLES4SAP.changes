@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Mar 26 14:32:55 UTC 2018 - rbrown@suse.com
+
+- Create /root subvolume on fresh installs (bsc#1085266)
+- 15.0.3
+
+-------------------------------------------------------------------
 Thu Mar 22 14:31:19 UTC 2018 - lslezak@suse.cz
 
 - Enhance the XSL file so the translatable strings can be extracted
@@ -7,7 +13,7 @@ Thu Mar 22 14:31:19 UTC 2018 - lslezak@suse.cz
 
 -------------------------------------------------------------------
 Wed Jan 10 17:13:42 UTC 2018 - rbrown@suse.com
- 
+
 - adjust subvolume list to have NoCOW /var instead of many
 subvolumes (boo#1075369)
 
@@ -15,24 +21,24 @@ subvolumes (boo#1075369)
 Fri Dec  1 14:11:15 UTC 2017 - varkoly@suse.com
 
 - FATE#323792: [MODULE] Create SAP Applications Module
-  o Adapt the text according to PM 
+  o Adapt the text according to PM
   o Remove all existing partitions
 
 -------------------------------------------------------------------
 Wed Nov 22 12:59:20 UTC 2017 - dakechi@suse.com
 
-- bsc#1066771: [Build 327.1] [SLED] gnome-shell-classic was not 
+- bsc#1066771: [Build 327.1] [SLED] gnome-shell-classic was not
   installed by default
 - bsc#1069413: [Build 343.1] gnome-basic pattern not found during
-  installation 
-  Adjusted the system role to consider the new name of the 
+  installation
+  Adjusted the system role to consider the new name of the
   gnome_basic pattern (with underscore).
- 
+
 -------------------------------------------------------------------
 Tue Nov  7 10:39:55 UTC 2017 - varkoly@suse.com
 
-- bsc#1066678 New partitioning proposal does not work. 
-  Fixed the fs tags. From <fstypes> to <fs_type> 
+- bsc#1066678 New partitioning proposal does not work.
+  Fixed the fs tags. From <fstypes> to <fs_type>
 - Fix swap size
 - Remove weight
 - Introduce sap_server pattern again.
@@ -54,12 +60,12 @@ Fri Oct 27 09:33:53 UTC 2017 - varkoly@suse.com
 Thu Oct 19 13:02:55 UTC 2017 - varkoly@suse.com
 
 - FATE#323792: [MODULE] Create SAP Applications Module
-- Include sles4sap_role 
+- Include sles4sap_role
 
 -------------------------------------------------------------------
 Thu Oct  5 10:58:20 UTC 2017 - varkoly@suse.com
 
-- Adapt partitioning for SLES4SAP 
+- Adapt partitioning for SLES4SAP
 - Remove first_user module
 - FATE#323792: [MODULE] Create SAP Applications Module
 
