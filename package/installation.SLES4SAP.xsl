@@ -47,7 +47,7 @@ textdomain="control"
              <other_delete_mode>all</other_delete_mode>
              <lvm_vg_strategy>use_needed</lvm_vg_strategy>
            </proposal>
-           
+
            <volumes config:type="list">
              <!-- The root filesystem -->
              <volume>
@@ -60,7 +60,7 @@ textdomain="control"
                <!-- Always use snapshots, no matter what -->
                <snapshots config:type="boolean">true</snapshots>
                <snapshots_configurable config:type="boolean">false</snapshots_configurable>
-           
+
                <btrfs_default_subvolume>@</btrfs_default_subvolume>
                <subvolumes config:type="list">
                  <subvolume>
@@ -68,6 +68,9 @@ textdomain="control"
                  </subvolume>
                  <subvolume>
              	<path>opt</path>
+                 </subvolume>
+                 <subvolume>
+             	<path>root</path>
                  </subvolume>
                  <subvolume>
              	<path>srv</path>
@@ -84,7 +87,7 @@ textdomain="control"
              	<copy_on_write config:type="boolean">false</copy_on_write>
                  </subvolume>
                  <!-- architecture specific subvolumes -->
-           
+
                  <subvolume>
              	<path>boot/grub2/i386-pc</path>
              	<archs>i386,x86_64</archs>
@@ -107,7 +110,7 @@ textdomain="control"
                  </subvolume>
                </subvolumes>
              </volume>
-           
+
              <!-- The swap volume -->
              <volume>
                <mount_point>swap</mount_point>
@@ -116,14 +119,14 @@ textdomain="control"
                <min_size>2GiB</min_size>
                <max_size>2GiB</max_size>
              </volume>
-           
+
              <!--
                No home filesystem, so the option of a separate home is not even
                offered to the user.
                On the other hand, a separate data volume (optional or mandatory) could
                be defined.
              -->
-           
+
            </volumes>
         </partitioning>
         <additional_dialogs>inst_sap-start</additional_dialogs>

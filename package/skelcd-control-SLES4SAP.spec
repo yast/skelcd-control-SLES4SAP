@@ -46,7 +46,7 @@ Provides:       system-installation() = SLES_SAP
 
 Url:            https://github.com/yast/skelcd-control-SLES4SAP
 AutoReqProv:    off
-Version:        15.0.2
+Version:        15.0.3
 Release:        0
 Summary:        SLES4SAP control file needed for installation
 License:        MIT
