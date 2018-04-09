@@ -46,13 +46,17 @@ Provides:       system-installation() = SLES_SAP
 
 Url:            https://github.com/yast/skelcd-control-SLES4SAP
 AutoReqProv:    off
-Version:        15.0.3
+Version:        15.0.4
 Release:        0
 Summary:        SLES4SAP control file needed for installation
 License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source0:        installation.SLES4SAP.xsl
+
+# SUSEConnect does not build for i586 and s390 and is not supported on those architectures
+# bsc#1088552
+ExcludeArch:    %ix86 s390
 
 %description
 SLES4SAP control file needed for installation

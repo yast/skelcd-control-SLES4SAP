@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Apr  9 10:11:25 UTC 2018 - jsrain@suse.cz
+
+- do not build on 32-bit architectures (bsc#1088552)
+- 15.0.4
+
+-------------------------------------------------------------------
 Wed Mar 26 14:32:55 UTC 2018 - rbrown@suse.com
 
 - Create /root subvolume on fresh installs (bsc#1085266)
