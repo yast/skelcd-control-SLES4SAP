@@ -27,17 +27,22 @@
 #
 ######################################################################
 
-Name:           skelcd-control-SLES4SAP
+%define         skelcd_name SLES4SAP
+
+Name:           skelcd-control-%{skelcd_name}
 # xsltproc for converting SLES control file to SLES-for-VMware
 BuildRequires:  libxslt-tools
 # xmllint (for validation)
 BuildRequires:  libxml2-tools
-# RNG validation schema
-BuildRequires: yast2-installation-control
+# Added skelcd macros
+BuildRequires: yast2-installation-control >= 4.1.5
 
-# original SLES control file
-BuildRequires: skelcd-control-SLES >= 15.0.0
+# Original SLES control file (FHS compliant)
+BuildRequires: skelcd-control-SLES >= 15.1.0
 BuildRequires: diffutils
+
+# Use FHS compliant path
+Requires:       yast2 >= 4.1.41
 
 Provides:       system-installation() = SLES_SAP
 
@@ -46,7 +51,7 @@ Provides:       system-installation() = SLES_SAP
 
 Url:            https://github.com/yast/skelcd-control-SLES4SAP
 AutoReqProv:    off
-Version:        15.0.5
+Version:        15.1.0
 Release:        0
 Summary:        SLES4SAP control file needed for installation
 License:        MIT
@@ -65,10 +70,8 @@ SLES4SAP control file needed for installation
 
 %build
 # transform ("patch") the original SLES installation file
-xsltproc %{SOURCE0} /installation.xml > installation.xml
-#xsltproc %{SOURCE0} /installation.xml > installation1.xml
-#xmllint --format installation1.xml > installation.xml
-diff -u /installation.xml installation.xml || :
+xsltproc %{SOURCE0} %{skelcd_control_datadir}/SLES.xml > installation.xml
+diff -u %{skelcd_control_datadir}/SLES.xml installation.xml || :
 
 %check
 #
@@ -80,10 +83,11 @@ diff -u /installation.xml installation.xml || :
 #
 # Add installation file
 #
-install -m 644 installation.xml $RPM_BUILD_ROOT/
+mkdir -p $RPM_BUILD_ROOT/%{skelcd_control_datadir}
+install -m 644 installation.xml $RPM_BUILD_ROOT/%{skelcd_control_datadir}/%{skelcd_name}.xml
 
 %files
 %defattr(644,root,root,755)
-/installation.xml
+%{skelcd_control_datadir}
 
 %changelog
