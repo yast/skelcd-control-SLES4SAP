@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Feb 26 11:19:54 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
+
+- Added default preselected modules in offline installation
+  (jsc#SLE-8040)
+- 15.2.1
+
+-------------------------------------------------------------------
 Thu Oct 17 10:28:15 UTC 2019 - Josef Reidinger <jreidinger@suse.com>
 
 - Skip the registration step on the online and offline installation
