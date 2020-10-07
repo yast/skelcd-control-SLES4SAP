@@ -38,7 +38,7 @@ BuildRequires:  libxml2-tools
 BuildRequires: yast2-installation-control >= 4.1.5
 
 # Original SLES control file (skipping registration)
-BuildRequires: skelcd-control-SLES >= 15.2.0
+BuildRequires: skelcd-control-SLES >= 15.3.2
 BuildRequires: diffutils
 
 # Use FHS compliant path
@@ -51,7 +51,7 @@ Provides:       system-installation() = SLES_SAP
 
 Url:            https://github.com/yast/skelcd-control-SLES4SAP
 AutoReqProv:    off
-Version:        15.2.1
+Version:        15.3.0
 Release:        0
 Summary:        SLES4SAP control file needed for installation
 License:        MIT

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Oct  7 21:04:14 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Update dependency on skelcd-control-SLES to version 15.3.0
+  (bsc#1177431).
+- 15.3.0
+
+-------------------------------------------------------------------
 Wed Feb 26 11:19:54 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
 
 - Added default preselected modules in offline installation
