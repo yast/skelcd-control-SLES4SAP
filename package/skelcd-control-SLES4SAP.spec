@@ -38,7 +38,7 @@ BuildRequires:  libxml2-tools
 BuildRequires: yast2-installation-control >= 4.1.5
 
 # Original SLES control file (skipping registration)
-BuildRequires: skelcd-control-SLES >= 15.2.0
+BuildRequires: skelcd-control-SLES >= 15.3.2
 BuildRequires: diffutils
 
 # Use FHS compliant path
