@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Nov 24 09:24:17 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
+
+- Fixed the default preselected modules when installing from
+  the Full medium (bsc#1178138)
+- 15.2.2
+
+-------------------------------------------------------------------
 Wed Feb 26 11:19:54 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
 
 - Added default preselected modules in offline installation
