@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Nov 24 09:24:17 UTC 2020 - Ladislav Slezák <lslezak@suse.cz>
+
+- Fixed the default preselected modules when installing from
+  the Full medium (bsc#1178138)
+- 15.3.1
+
+-------------------------------------------------------------------
 Wed Oct  7 21:04:14 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Update dependency on skelcd-control-SLES to version 15.3.0
