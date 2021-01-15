@@ -1,8 +1,8 @@
 skelcd-control-SLES4SAP
 ===================
 
-[![Travis Build](https://travis-ci.org/yast/skelcd-control-SLES4SAP.svg?branch=master)](https://travis-ci.org/yast/skelcd-control-SLES)
-
+[![Workflow Status](https://github.com/yast/skelcd-control-SLES4SAP/workflows/CI/badge.svg?branch=master)](
+https://github.com/yast/skelcd-control-SLES4SAP/actions?query=branch%3Amaster)
 
 Installation control file for SUSE Linux Enterprise Server for SAP product. It is based on SLES
 product with modifications expressed in xslt.
