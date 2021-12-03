@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Dec  3 10:12:52 UTC 2021 - David Diaz <dgonzalez@suse.com>
+
+- Update dependency on skelcd-control-SLES to version 15.4.1 to
+  remove the registration step (bsc#1193311).
+- 15.4.1
+
+-------------------------------------------------------------------
 Tue Apr 20 13:51:55 UTC 2021 - Ladislav Slezák <lslezak@suse.cz>
 
 - 15.4.0 (bsc#1185510)
