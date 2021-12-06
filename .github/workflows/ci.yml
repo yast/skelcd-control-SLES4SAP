@@ -30,9 +30,4 @@ jobs:
       run: yast-ci-ruby -o package
 
     - name: Validate XML
-      # install the built RPM and validate the XML using jing
-      run: |-
-        rpm -iv --force --nodeps /usr/src/packages/RPMS/*/*.rpm
-        XML_FILES=$(rpm -qpl /usr/src/packages/RPMS/*/*.rpm | grep "\.xml$")
-        echo "Validating ${XML_FILES}..."
-        jing /usr/share/YaST2/control/control.rng $XML_FILES && echo "OK"
+      run: rake test:validate
