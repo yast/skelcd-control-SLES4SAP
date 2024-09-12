@@ -1,7 +1,7 @@
 #
-# spec file for package skelcd-control-SLES4SAP
+# spec file
 #
-# Copyright (c) 2016 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2023 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
 
@@ -35,12 +35,12 @@ BuildRequires:  libxslt-tools
 # xmllint (for validation)
 BuildRequires:  libxml2-tools
 # Added skelcd macros
-BuildRequires: yast2-installation-control >= 4.1.5
+BuildRequires:  yast2-installation-control >= 4.1.5
 
 # Original SLES control file
 # (simplified workflow - https://github.com/yast/skelcd-control-SLES/pull/142)
-BuildRequires: skelcd-control-SLES >= 15.4.1
-BuildRequires: diffutils
+BuildRequires:  skelcd-control-SLES >= 15.4.1
+BuildRequires:  diffutils
 
 # Use FHS compliant path
 Requires:       yast2 >= 4.1.41
@@ -50,7 +50,7 @@ Provides:       system-installation() = SLES_SAP
 #
 ######################################################################
 
-Url:            https://github.com/yast/skelcd-control-SLES4SAP
+URL:            https://github.com/yast/skelcd-control-SLES4SAP
 AutoReqProv:    off
 Version:        15.6.0
 Release:        0
